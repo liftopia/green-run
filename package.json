@@ -1,0 +1,31 @@
+{
+  "name": "funny-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev_start": "nodemon ./bin/www",
+    "lint": "./node_modules/.bin/eslint ."
+  },
+  "author": "Erik",
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "ejs": "~2.5.7",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "node-sass-middleware": "0.11.0"
+  },
+  "devDependencies": {
+    "cookie-parser": "~1.4.3",
+    "ejs": "~2.5.7",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.10.0",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
+    "node-sass-middleware": "0.11.0",
+    "nodemon": "^1.17.3"
+  }
+}
