@@ -22,12 +22,12 @@ It's **THAT** easy
 ### TODO
 
 1: forms to:
-* add beer object
-* edit beer object
-* delete beer object
-* display beer object
-* show all beers
-* filter all beers
+- [ ] add beer object
+- [ ] edit beer object
+- [ ] delete beer object
+- [ ] display beer object
+- [ ] show all beers
+- [ ] filter all beers
 
 2: Improve and maintain app stability through development
 
