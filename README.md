@@ -1,4 +1,4 @@
-# beersbeersbeers
+# green-run
 ### Express based Node Backend
 
 Here we are using a JSON file full of beer(:beers:) information to act as a substitute database however the model can easily be changed to accommodate for an actual database.
