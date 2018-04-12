@@ -32,13 +32,32 @@ exports.get = function (id, cb) {
 exports.delete = function (id, cb) {
   fs.readFile(beerPath, 'utf8', (err, data) => {
     if (err) throw err;
-    const beerList = JSON.parse(data).value.filter(el => el.id !== id);
+    const parsedData = JSON.parse(data);
+    parsedData.value = parsedData.value.filter(el => el.id !== id);
     const deletedBeer = findBeerObject(id, data);
-    console.log(deletedBeer)
-    const jsonBeers = JSON.stringify(beerList, null, 2);
+    const jsonBeers = JSON.stringify(parsedData, null, 2);
     fs.writeFile(beerPath, jsonBeers, 'utf8', (error) => {
       if (error) throw error;
       cb(null, `Successfully deleted ${deletedBeer.name} from ${deletedBeer.breweryName} with an ID of ${deletedBeer.id}`);
+    });
+  });
+};
+
+// edit a specific beer object with provided data
+exports.edit = function (id, beerData, cb) {
+  fs.readFile(beerPath, 'utf8', (err, data) => {
+    const parsedData = JSON.parse(data);
+    let beerIndex = 0;
+    parsedData.value.forEach((el, i) => {
+      if (el.id === id) {
+        beerIndex = i;
+        parsedData.value[i] = { ...el, ...beerData };
+      }
+    });
+    const jsonBeers = JSON.stringify(parsedData, null, 2);
+    fs.writeFile(beerPath, jsonBeers, 'utf8', (error) => {
+      if (error) throw error;
+      cb(null, `Successfully updated ${parsedData.value[beerIndex].name} with ${JSON.stringify(beerData)}`);
     });
   });
 };
@@ -47,7 +66,7 @@ exports.delete = function (id, cb) {
 function findBeerObject(id, beerList) {
   const beers = JSON.parse(beerList).value;
   const singleBeer = beers.find(el => el.id === id);
-  return singleBeer;
+  return JSON.stringify(singleBeer);
 }
 
 // gets all data from file

@@ -13,3 +13,20 @@ EJS is being used as the templating language for its server side capabilities an
 3. Start server (npm start or npm run dev_start)
 
 It's **THAT** easy
+
+
+---
+
+###TODO
+
+1: forms to:
+* add beer object
+* edit beer object
+* delete beer object
+* display beer object
+* show all beers
+* filter all beers
+
+2: Improve and maintain app stability through development
+
+3: Ensure full test coverage

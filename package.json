@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/server",
     "dev_start": "nodemon ./bin/server",
-    "lint": "./node_modules/.bin/eslint ."
+    "lint": "./node_modules/.bin/eslint .",
+    "lint_and_fix": "./node_modules/.bin/eslint . --fix"
   },
   "author": "Erik",
   "dependencies": {
