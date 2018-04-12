@@ -1,3 +1,5 @@
+![custom_ski_trail_signs](https://user-images.githubusercontent.com/82756/38708914-48283ace-3e6d-11e8-8863-cbc3a04e510e.jpg)
+
 # green-run
 ### Express based Node Backend
 
@@ -17,7 +19,7 @@ It's **THAT** easy
 
 ---
 
-###TODO
+### TODO
 
 1: forms to:
 * add beer object
@@ -29,4 +31,4 @@ It's **THAT** easy
 
 2: Improve and maintain app stability through development
 
-3: Ensure full test coverage
+3: Ensure appropriate test coverage
