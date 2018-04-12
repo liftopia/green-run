@@ -1,4 +1,4 @@
-![custom_ski_trail_signs](https://user-images.githubusercontent.com/82756/38708914-48283ace-3e6d-11e8-8863-cbc3a04e510e.jpg)
+![green-run](https://user-images.githubusercontent.com/82756/38709349-5c72995a-3e6f-11e8-9c50-8c067b699923.png)
 
 # green-run
 ### Express based Node Backend
