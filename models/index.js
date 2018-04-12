@@ -19,7 +19,7 @@ exports.create = function (beerObj, cb) {
   });
 };
 
-// get specific data by id
+// get specific beer obj by id
 exports.get = function (id, cb) {
   fs.readFile(beerPath, 'utf8', (err, data) => {
     if (err) throw err;
@@ -28,6 +28,22 @@ exports.get = function (id, cb) {
   });
 };
 
+// delete specific beer obj by id
+exports.delete = function (id, cb) {
+  fs.readFile(beerPath, 'utf8', (err, data) => {
+    if (err) throw err;
+    const beerList = JSON.parse(data).value.filter(el => el.id !== id);
+    const deletedBeer = findBeerObject(id, data);
+    console.log(deletedBeer)
+    const jsonBeers = JSON.stringify(beerList, null, 2);
+    fs.writeFile(beerPath, jsonBeers, 'utf8', (error) => {
+      if (error) throw error;
+      cb(null, `Successfully deleted ${deletedBeer.name} from ${deletedBeer.breweryName} with an ID of ${deletedBeer.id}`);
+    });
+  });
+};
+
+// filter beer list for a particular id
 function findBeerObject(id, beerList) {
   const beers = JSON.parse(beerList).value;
   const singleBeer = beers.find(el => el.id === id);
