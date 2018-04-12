@@ -1,3 +1,5 @@
+
+
 # green-run
 ### Express based Node Backend
 
@@ -29,4 +31,4 @@ It's **THAT** easy
 
 2: Improve and maintain app stability through development
 
-3: Ensure full test coverage
+3: Ensure appropriate test coverage
