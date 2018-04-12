@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev_start": "nodemon ./bin/www",
+    "start": "node ./bin/server",
+    "dev_start": "nodemon ./bin/server",
     "lint": "./node_modules/.bin/eslint ."
   },
   "author": "Erik",
