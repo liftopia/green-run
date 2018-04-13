@@ -1,4 +1,5 @@
 /* eslint-disable */
+// A const copy of the data in case you need to return the JSON to it's original form.
 
 const lockedBeer = {
   "value": [
