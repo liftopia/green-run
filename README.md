@@ -11,8 +11,9 @@ EJS is being used as the templating language for its server side capabilities an
 
 ### To Get Started
 1. Fork repo
-2. Download dependencies
-3. Start server (npm start or npm run dev_start)
+2. Pull to local machine
+3. Download dependencies
+4. Start server (npm start or npm run dev_start)
 
 It's **THAT** easy
 
