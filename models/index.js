@@ -34,7 +34,7 @@ exports.delete = function (id, cb) {
     if (err) throw err;
     const parsedData = JSON.parse(data);
     parsedData.value = parsedData.value.filter(el => el.id !== id);
-    const deletedBeer = findBeerObject(id, data);
+    const deletedBeer = JSON.parse(findBeerObject(id, data));
     const jsonBeers = JSON.stringify(parsedData, null, 2);
     fs.writeFile(beerPath, jsonBeers, 'utf8', (error) => {
       if (error) throw error;
