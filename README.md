@@ -1,3 +1,6 @@
+# Vulnerability Notice
+This repo has two vulnerabile dependencies (as of 1/24/19), and has since been archived. If we wish to reuse this repo, please update the effected dependencies.
+
 ![green-run](https://user-images.githubusercontent.com/82756/38709349-5c72995a-3e6f-11e8-9c50-8c067b699923.png)
 
 # green-run
